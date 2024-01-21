@@ -2,6 +2,8 @@
 
 Repositório do contrato inteligente do marketplace do Mundo Digital.
 
+![ASPPIBRA ESCRITURA](https://raw.githubusercontent.com/ASPPIBRA-DAO/Imagens/890ffa9bfb4c79f650c48e627aa2306299c17c4b/Jornal/ASPPIBRA-ESCRITURA.svg)
+
 ## Índice
 
 1. [**Introdução**](#introdução)
