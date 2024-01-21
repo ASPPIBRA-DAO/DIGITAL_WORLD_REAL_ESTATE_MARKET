@@ -106,3 +106,5 @@ Contribuições para a documentação também são valorizadas. Se você identif
 Agradecemos antecipadamente por seu suporte e contribuições para tornar o contrato inteligente do Mundo Digital ainda melhor. Juntos, podemos criar uma plataforma mais robusta e eficiente.
 
 ## Licença 📄
+
+Este projeto é protegido pelos termos do modelo de licença de Software Proprietário. Consulte o arquivo **LICENSE** para obter detalhes.
