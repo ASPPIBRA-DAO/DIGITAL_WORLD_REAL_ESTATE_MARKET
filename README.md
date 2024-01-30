@@ -11,7 +11,7 @@ Repositório do contrato inteligente do marketplace do Mundo Digital.
 3. [**Instalação**](#instalação)
 4. [**Uso**](#uso)
 5. [**Contribuições**](#contribuições)
-6. [**Licença**](#licença)
+6. [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md)
 
 ## Introdução 🚀
 
