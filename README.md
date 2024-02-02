@@ -28,66 +28,25 @@ Para executar o contrato inteligente, é necessário ter o seguinte:
 
 Além dos requisitos descritos na seção "Requisitos" deste README, o processo de digitalização de registros imobiliários também requer a coleta das seguintes informações e documentos:
 
-#### Informações pessoais:
+| Categoria                       | Documento                                             | Descrição                                                                         |
+|---------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Informações pessoais:**      | Nome completo                                         | Nome completo do proprietário                                                    |
+|                                 | Data de nascimento                                    | Data de nascimento do proprietário                                                |
+|                                 | CPF                                                   | Cadastro de Pessoa Física do proprietário                                         |
+|                                 | RG                                                    | Registro Geral do proprietário                                                    |
+|                                 | Nacionalidade                                         | Nacionalidade do proprietário                                                     |
+|                                 | Estado civil                                          | Estado civil do proprietário                                                      |
+| **Comprovante de residência:**  | Conta de água                                         | Comprovante de residência - água                                                 |
+|                                 | Conta de luz                                          | Comprovante de residência - luz                                                  |
+|                                 | Conta de gás                                          | Comprovante de residência - gás                                                  |
+| **IPTU:**                       | Comprovante de pagamento do IPTU                      | Comprovante de pagamento do Imposto sobre a Propriedade Territorial Urbana        |
+| **Ônus reais:**                 | Comprovante de ônus reais                             | Documento que comprova ônus reais                                                |
+| **Planta topográfica do lote:** | Documento que representa a forma e as dimensões do lote | Planta topográfica do lote                                                    |
+| **Planta arquitetônica do imóvel:** | Documento que representa a distribuição interna do imóvel | Planta arquitetônica do imóvel                                              |
+| **Planta de zoneamento:**       | Documento que representa a divisão de uma área urbana em zonas | Planta de zoneamento                                                         |
+| **Escritura:**                  | Escritura                                             | Documento público que registra a transferência de propriedade de um imóvel        |
+| **Fotos do imóvel:**            | Fotos do imóvel                                       | Fotos do imóvel para ilustrar e facilitar a identificação do imóvel                |
 
-| Campo                  | Descrição                                   |
-|------------------------|---------------------------------------------|
-| Nome completo          | Nome completo do proprietário               |
-| Data de nascimento     | Data de nascimento do proprietário          |
-| CPF                    | Cadastro de Pessoa Física do proprietário   |
-| RG                     | Registro Geral do proprietário              |
-| Nacionalidade          | Nacionalidade do proprietário               |
-| Estado civil           | Estado civil do proprietário                |
-
-#### Comprovante de residência:
-
-| Documento             | Descrição                          |
-|-----------------------|------------------------------------|
-| Conta de água          | Comprovante de residência - água   |
-| Conta de luz           | Comprovante de residência - luz    |
-| Conta de gás           | Comprovante de residência - gás    |
-
-#### IPTU:
-
-| Documento                        | Descrição                               |
-|----------------------------------|-----------------------------------------|
-| Comprovante de pagamento do IPTU | Comprovante de pagamento do Imposto sobre a Propriedade Territorial Urbana |
-
-#### Ônus reais:
-
-| Documento                  | Descrição                         |
-|----------------------------|-----------------------------------|
-| Comprovante de ônus reais   | Documento que comprova ônus reais |
-
-#### Planta topográfica do lote:
-
-| Documento                              | Descrição                                      |
-|----------------------------------------|------------------------------------------------|
-| Documento que representa a forma e as dimensões do lote | Planta topográfica do lote |
-
-#### Planta arquitetônica do imóvel:
-
-| Documento                              | Descrição                                      |
-|----------------------------------------|------------------------------------------------|
-| Documento que representa a distribuição interna do imóvel | Planta arquitetônica do imóvel |
-
-#### Planta de zoneamento:
-
-| Documento                              | Descrição                                      |
-|----------------------------------------|------------------------------------------------|
-| Documento que representa a divisão de uma área urbana em zonas | Planta de zoneamento |
-
-#### Escritura:
-
-| Documento                       | Descrição                                           |
-|---------------------------------|-----------------------------------------------------|
-| Escritura                        | Documento público que registra a transferência de propriedade de um imóvel |
-
-#### Fotos do imóvel:
-
-| Documento                       | Descrição                                           |
-|---------------------------------|-----------------------------------------------------|
-| Fotos do imóvel                  | Fotos do imóvel para ilustrar e facilitar a identificação do imóvel |
 
 
 ## Uso 🛠️
