@@ -99,4 +99,4 @@ Agradecemos antecipadamente por seu suporte e contribuições para tornar o cont
 
 ## Licença 📄
 
-Este projeto é protegido pelos termos do modelo de licença de Software Proprietário. Consulte o arquivo **LICENSE** para obter detalhes.
+Este projeto é protegido pelos termos do modelo de licença de Software Proprietário. Consulte o arquivo [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md) para obter detalhes.
