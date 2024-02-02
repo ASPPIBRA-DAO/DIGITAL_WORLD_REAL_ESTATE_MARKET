@@ -68,8 +68,6 @@ Além dos requisitos descritos na seção "Requisitos" deste README, o processo 
 
 ## Contribuições 🤝
 
-Explique como os colaboradores podem contribuir para o desenvolvimento do contrato inteligente.
-
 ### Relatando Problemas 🐛
 
 Se encontrar algum problema ou bug, sinta-se à vontade para abrir uma issue em nosso repositório. Certifique-se de fornecer detalhes sobre o problema encontrado, incluindo passos para reprodução, mensagens de erro e informações relevantes para facilitar a correção.
