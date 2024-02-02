@@ -74,9 +74,22 @@ Além dos requisitos descritos na seção "Requisitos" deste README, o processo 
 
 ## Uso 🛠️
 
-https://github.com/ASPPIBRA-DAO/Imagens/blob/c35ffcfb3ccc5222d757ece93cd62a977870834d/MP4/Formulario.mp4
 
-Forneça informações detalhadas sobre como usar o contrato inteligente no Marketplace do Mundo Digital.
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario7.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario6.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario5.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario4.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario3.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario2.png)
+
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario1.png)
+
+
 
 ## Contribuições 🤝
 
