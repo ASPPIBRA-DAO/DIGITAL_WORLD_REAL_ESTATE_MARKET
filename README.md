@@ -60,19 +60,37 @@ O projeto apresenta um contrato Solidity que serve como um Marketplace descentra
 
 ## Uso 🛠️
 
+### Screenshots
+
+
+
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario7.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario6.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario5.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario4.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario3.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario2.png)
+<br />
 
+> [FORMULARIO ESCRITURA](https://) - `Formulario` Page
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario1.png)
+<br />
 
 ## Contribuições 🤝
 
