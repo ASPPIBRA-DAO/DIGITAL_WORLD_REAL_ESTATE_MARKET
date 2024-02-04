@@ -8,8 +8,9 @@
 2. [**Requisitos**](#requisitos)
 3. [**Recursos Principais**](#recursos-principais)
 4. [**Uso**](#uso)
-5. [**Contribuições**](#contribuições)
-6. [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md)
+5. [**Modelo**](https://github.com/ASPPIBRA-DAO/WEBINAR/tree/main/Modelo%20de%20Escritura)
+6. [**Contribuições**](#contribuições)
+7. [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md)
 
 ## Introdução 🚀
 
