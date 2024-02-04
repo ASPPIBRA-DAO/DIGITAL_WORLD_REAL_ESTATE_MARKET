@@ -1,4 +1,4 @@
-# Smart Contract Marketplace - Mundo Digital 🌐🏡
+# Mundo Digital Real Estate Marketplace 🌐 🏡
 
 ![ASPPIBRA ESCRITURA](https://raw.githubusercontent.com/ASPPIBRA-DAO/Imagens/890ffa9bfb4c79f650c48e627aa2306299c17c4b/Jornal/ASPPIBRA-ESCRITURA.svg)
 
@@ -6,14 +6,14 @@
 
 1. [**Introdução**](#introdução)
 2. [**Requisitos**](#requisitos)
-3. [**Instalação**](#instalação)
+3. [**Recursos Principais**](#recursos-principais)
 4. [**Uso**](#uso)
 5. [**Contribuições**](#contribuições)
 6. [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md)
 
 ## Introdução 🚀
 
-O Marketplace do Mundo Digital visa promover a inclusão digital através da digitalização dos registros imobiliários, permitindo transações internacionais para o setor imobiliário. O processo de digitalização é semiautomatizado, possibilitando aos usuários do aplicativo Mundo Digital adquirir sua versão digital do registro imobiliário.
+O Mundo Digital Real Estate Marketplace tem como objetivo impulsionar a inclusão digital por meio da digitalização de registros imobiliários, permitindo transações internacionais no setor imobiliário. O processo de digitalização é semiautomatizado, possibilitando aos usuários do aplicativo Mundo Digital adquirir sua versão digital do registro imobiliário.
 
 ## Requisitos 📋
 
@@ -45,10 +45,20 @@ Além dos requisitos descritos na seção "Requisitos" deste README, o processo 
 | **Escritura:**                  | Escritura                                             | Documento público que registra a transferência de propriedade de um imóvel        |
 | **Fotos do imóvel:**            | Fotos do imóvel                                       | Fotos do imóvel para ilustrar e facilitar a identificação do imóvel                |
 
+## Recursos Principais
 
+O projeto apresenta um contrato Solidity que serve como um Marketplace descentralizado para tokens não fungíveis (NFTs), oferecendo uma série de recursos robustos:
+
+1. **Criação Descentralizada de NFTs:**
+   - Os usuários podem criar facilmente seus próprios NFTs de forma descentralizada, proporcionando autonomia na geração de conteúdo exclusivo.
+
+2. **Negociação compra e venda de NFTs:**
+   - Facilita a negociação peer-to-peer de NFTs, permitindo que os usuários troquem ativos digitais de maneira segura e transparente.
+
+3. **Leilões Descentralizados:**
+   - Oferece a funcionalidade de criar leilões para NFTs, possibilitando aos usuários aceitar lances em um ambiente descentralizado e transparente.
 
 ## Uso 🛠️
-
 
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario7.png)
 
@@ -63,8 +73,6 @@ Além dos requisitos descritos na seção "Requisitos" deste README, o processo 
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario2.png)
 
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario1.png)
-
-
 
 ## Contribuições 🤝
 
