@@ -72,7 +72,7 @@ O projeto apresenta um contrato Solidity que serve como um Marketplace descentra
 
 > [Mundo Digital](https://) - `Formulario`
 
-![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario6.png)
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/c714cad8f42cd86cad42b7eb681e96ee7f310086/Layout_app/Escritura/Formulario6.png)
 <br />
 
 > [Mundo Digital](https://) - `Formulario`
@@ -82,7 +82,7 @@ O projeto apresenta um contrato Solidity que serve como um Marketplace descentra
 
 > [Mundo Digital](https://) - `Formulario`
 
-![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario4.png)
+![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/c714cad8f42cd86cad42b7eb681e96ee7f310086/Layout_app/Escritura/Formulario4.png)
 <br />
 
 > [Mundo Digital](https://) - `Formulario`
