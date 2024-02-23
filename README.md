@@ -65,7 +65,7 @@ O projeto apresenta um contrato Solidity que serve como um Marketplace descentra
 
 
 
-> [Mundo Digital](https://) - `Formulario`
+> [Mundo Digital](https://) - `Proprietários`
 
 ![FORMULARIO ESCRITURA](https://github.com/ASPPIBRA-DAO/Imagens/blob/84bc56a7f478111c614bc730f10cb78e170ac303/Layout_app/Escritura/Formulario7.png)
 <br />
