@@ -32,31 +32,45 @@ contract Digitalworld is Initializable, ERC721Upgradeable, ERC721EnumerableUpgra
         __ERC721Votes_init();
     }
 
+    event TokenMinted(address indexed to, uint256 indexed tokenId, string tokenURI);
+
+    event TokenBurned(address indexed owner, uint256 indexed tokenId);
+
+    event ContractPaused(address indexed pauser);
+
+    event ContractUnpaused(address indexed unpauser);
+
+    event BaseURIUpdated(string newBaseURI);
+
+    event VoteCast(address indexed voter, uint256 indexed proposalId, bool support);
+
     function _baseURI() internal pure override returns (string memory) {
         return "https://www.asppibra.com.br/nft";
     }
 
     function pause() public onlyOwner {
         _pause();
+        emit ContractPaused(msg.sender);
     }
 
     function unpause() public onlyOwner {
         _unpause();
+        emit ContractUnpaused(msg.sender);
     }
 
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
+        emit TokenMinted(to, tokenId, uri);
     }
-
-    // The following functions are overrides required by Solidity.
 
     function _update(address to, uint256 tokenId, address auth)
         internal
         override(ERC721Upgradeable, ERC721EnumerableUpgradeable, ERC721PausableUpgradeable, ERC721VotesUpgradeable)
         returns (address)
     {
+        emit OwnershipTransferred(owner(), to);
         return super._update(to, tokenId, auth);
     }
 
