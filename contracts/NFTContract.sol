@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import {ERC721, ERC721Enumerable} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
 contract NFT is ERC721Enumerable {
     mapping(uint => string) metadatas;
@@ -54,5 +54,9 @@ contract NFT is ERC721Enumerable {
             "ERC721Metadata: URI query for nonexistent token"
         );
         return metadatas[tokenId];
+    }
+
+    function _exists(uint256 tokenId) internal view virtual returns (bool) {
+        return _ownerOf(tokenId) != address(0);
     }
 }

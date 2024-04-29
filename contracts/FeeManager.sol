@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract FeeManager is Ownable {
 
@@ -13,6 +13,9 @@ contract FeeManager is Ownable {
     uint256 public constant maxCutPerMillion = 100000; // 10% cut
     
     uint256 public royaltyPerMillion=100000;
+
+    constructor() Ownable(msg.sender) {
+    }
 
     /**
      * @dev Sets the share cut for the owner of the contract that's

@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: Apache-2.0
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
+import {Address} from "@openzeppelin/contracts/utils/Address.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {IERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-import "./IMarketplace.sol";
-import "./FeeManager.sol";
+import {IMarketplace} from "./IMarketplace.sol";
+import {FeeManager} from "./FeeManager.sol";
 
-contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
+contract Marketplace is Pausable, FeeManager, IMarketplace {
     using Address for address;
-    using SafeMath for uint256;
-    //using SafeERC20 for IERC20;
+    using SafeERC20 for IERC20;
 
     IERC20 public acceptedToken;
 
@@ -32,7 +32,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
      */
     constructor(address _acceptedToken) {
         require(
-            _acceptedToken.isContract(),
+            isContract(_acceptedToken),
             "The accepted token address must be a deployed contract"
         );
         acceptedToken = IERC20(_acceptedToken);
@@ -119,7 +119,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         // check order updated params
         require(_priceInWei > 0, "Marketplace: Price should be bigger than 0");
         require(
-            _expiresAt > block.timestamp.add(1 minutes),
+            _expiresAt > block.timestamp + 1 minutes,
             "Marketplace: Expire time should be more than 1 minute in the future"
         );
 
@@ -148,17 +148,15 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         require(order.seller != msg.sender, "Marketplace: unauthorized sender");
 
         // market fee to cut
-        uint256 saleShareAmount = 0;
+        uint256 saleShareAmount;
 
         // Send market fees to owner
         if (FeeManager.cutPerMillion > 0) {
             // Calculate sale share
-            saleShareAmount = _priceInWei.mul(FeeManager.cutPerMillion).div(
-                1e6
-            );
+            saleShareAmount = _priceInWei * FeeManager.cutPerMillion / 1e6;
 
             // Transfer share amount for marketplace Owner
-            acceptedToken.transferFrom(
+            acceptedToken.safeTransferFrom(
                 msg.sender, //buyer
                 owner(),
                 saleShareAmount
@@ -166,10 +164,10 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         }
 
         // Transfer accepted token amount minus market fee to seller
-        acceptedToken.transferFrom(
+        acceptedToken.safeTransferFrom(
             msg.sender, // buyer
             order.seller, // seller
-            order.price.sub(saleShareAmount)
+            order.price - saleShareAmount
         );
 
         // Remove pending bid if any
@@ -212,22 +210,20 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         }
 
         // Transfer sale amount from bidder to escrow
-        acceptedToken.transferFrom(
+        acceptedToken.safeTransferFrom(
             msg.sender, // bidder
             address(this),
             _priceInWei
         );
 
         // calc market fees
-        uint256 saleShareAmount = _priceInWei.mul(FeeManager.cutPerMillion).div(
-            1e6
-        );
+        uint256 saleShareAmount = _priceInWei * FeeManager.cutPerMillion / 1e6;
 
         // to owner
-        acceptedToken.transfer(owner(), saleShareAmount);
+        acceptedToken.safeTransfer(owner(), saleShareAmount);
 
         // transfer escrowed bid amount minus market fee to seller
-        acceptedToken.transfer(order.seller, _priceInWei.sub(saleShareAmount));
+        acceptedToken.safeTransfer(order.seller, _priceInWei - saleShareAmount);
 
         // Transfer NFT asset
         IERC721(_nftAddress).transferFrom(address(this), msg.sender, _assetId);
@@ -308,15 +304,13 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         emit BidAccepted(bid.id);
 
         // calc market fees
-        uint256 saleShareAmount = bid.price.mul(FeeManager.cutPerMillion).div(
-            1e6
-        );
+        uint256 saleShareAmount = bid.price * FeeManager.cutPerMillion / 1e6;
 
         // to owner
-        acceptedToken.transfer(owner(), saleShareAmount);
+        acceptedToken.safeTransfer(owner(), saleShareAmount);
 
         // transfer escrowed bid amount minus market fee to seller
-        acceptedToken.transfer(order.seller, bid.price.sub(saleShareAmount));
+        acceptedToken.safeTransfer(order.seller, bid.price - saleShareAmount);
 
         _executeOrder(order.id, bid.bidder, _nftAddress, _assetId, _priceInWei);
     }
@@ -392,7 +386,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         require(_priceInWei > 0, "Marketplace: Price should be bigger than 0");
 
         require(
-            _expiresAt > block.timestamp.add(1 minutes),
+            _expiresAt > block.timestamp + 1 minutes,
             "Marketplace: Publication should be more than 1 minute in the future"
         );
 
@@ -470,7 +464,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         }
 
         // Transfer sale amount from bidder to escrow
-        acceptedToken.transferFrom(
+        acceptedToken.safeTransferFrom(
             msg.sender, // bidder
             address(this),
             _priceInWei
@@ -546,7 +540,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         delete bidByOrderId[_nftAddress][_assetId];
 
         // return escrow to canceled bidder
-        acceptedToken.transfer(_bidder, _escrowAmount);
+        acceptedToken.safeTransfer(_bidder, _escrowAmount);
 
         emit BidCancelled(_bidId);
     }
@@ -557,7 +551,7 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         returns (IERC721)
     {
         require(
-            _nftAddress.isContract(),
+            isContract(_nftAddress),
             "The NFT Address should be a contract"
         );
         // require(
@@ -565,5 +559,13 @@ contract Marketplace is Ownable, Pausable, FeeManager, IMarketplace {
         //     "The NFT contract has an invalid ERC721 implementation"
         // );
         return IERC721(_nftAddress);
+    }
+
+    function isContract(address _addr) private view returns (bool hasCode) {
+        uint length;
+        assembly {
+            length := extcodesize(_addr)
+        }
+        return length > 0;
     }
 }

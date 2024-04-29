@@ -61,7 +61,7 @@ module.exports = {
         apiKey: "WQKQ9RXXCTK715PKG1H7JUMV4ZEUW3KKXN",
     },
     solidity: {
-        version: "0.8.4",
+        version: "0.8.25",
         settings: {
             optimizer: {
                 enabled: true,
