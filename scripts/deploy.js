@@ -1,4 +1,6 @@
 const fs = require("fs");
+const { ethers } = require("hardhat");
+const { setTargetAddress } = require("./helpers");
 // const metadata_hashs = require("../resources/metadata_hash.json");
 
 const saveFiles = async (fileName, data) => {
@@ -32,22 +34,30 @@ const saveAbis = async () => {
 };
 
 async function main() {
-    saveAbis();
+    await saveAbis();
+    
+    const network = hre.network.name;
+
     // ERC20
     const ERC20Token_ = await ethers.getContractFactory("Token");
     const ERC20Token = await ERC20Token_.deploy(1e9);
+    await ERC20Token.deployed();
+    setTargetAddress("Token", network, ERC20Token.address);
+
     //NFT
-    const NFT_1 = await hre.ethers.getContractFactory("NFT");
+    const NFT_1 = await ethers.getContractFactory("NFT");
     const NFT1 = await NFT_1.deploy("test1 NFT", "t1NFT");
     await NFT1.deployed();
+    setTargetAddress("NFT1", network, NFT1.address);
 
     // for (var i = 0; i < 5; i++) {
     //     await NFT1.create(metadata_hashs[i]);
     // }
 
-    const NFT_2 = await hre.ethers.getContractFactory("NFT");
+    const NFT_2 = await ethers.getContractFactory("NFT");
     const NFT2 = await NFT_2.deploy("test2 NFT", "t2NFT");
     await NFT2.deployed();
+    setTargetAddress("NFT2", network, NFT2.address);
 
     // for (var i = 2; i < 4; i++) {
     //     await NFT2.create(metadata_hashs[i]);
@@ -56,6 +66,7 @@ async function main() {
     const NFT_3 = await hre.ethers.getContractFactory("NFT");
     const NFT3 = await NFT_3.deploy("test3 NFT", "t3NFT");
     await NFT3.deployed();
+    setTargetAddress("NFT3", network, NFT3.address);
 
     // for (var i = 1; i < 5; i++) {
     //     await NFT3.create(metadata_hashs[i]);
@@ -65,17 +76,18 @@ async function main() {
     const Marketplace_ = await hre.ethers.getContractFactory("Marketplace");
     const Marketplace = await Marketplace_.deploy(ERC20Token.address);
     await Marketplace.deployed();
+    setTargetAddress("Marketplace", network, Marketplace.address);
 
-    const addresses = {
-        ERC20: ERC20Token.address,
-        NFT: {
-            NFT1: NFT1.address,
-            NFT2: NFT2.address,
-            NFT3: NFT3.address,
-        },
-        Marketplace: Marketplace.address,
-    };
-    await saveFiles("addresses.json", JSON.stringify(addresses, undefined, 4));
+    // const addresses = {
+    //     Token: ERC20Token.address,
+    //     NFT: {
+    //         NFT1: NFT1.address,
+    //         NFT2: NFT2.address,
+    //         NFT3: NFT3.address,
+    //     },
+    //     Marketplace: Marketplace.address,
+    // };
+    // await saveFiles("addresses.json", JSON.stringify(addresses, undefined, 4));
 }
 
 main()

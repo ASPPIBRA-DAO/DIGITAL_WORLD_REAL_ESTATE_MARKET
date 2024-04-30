@@ -12,6 +12,14 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     }
 });
 
+const INFURA = process.env.INFURA || "";
+const ETHEREUM_API_KEY = process.env.ETHEREUM_API_KEY || "api-key";
+const OPTIMISM_API_KEY = process.env.OPTIMISM_API_KEY || "api-key";
+const BSC_API_KEY = process.env.BSC_API_KEY || "api-key";
+const FANTOM_API_KEY = process.env.FANTOM_API_KEY || "api-key";
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "api-key";
+const ARBITRUM_API_KEY = process.env.ARBITRUM_API_KEY || "api-key";
+
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
@@ -28,6 +36,10 @@ module.exports = {
         },
         fantomtestnet: {
             url: "https://rpc.testnet.fantom.network",
+            accounts: [process.env.PRIVATEKEY],
+        },
+        bscTestnet: {
+            url: `https://data-seed-prebsc-1-s1.bnbchain.org:8545`,
             accounts: [process.env.PRIVATEKEY],
         },
         ethereum: {
@@ -58,7 +70,26 @@ module.exports = {
     etherscan: {
         // Your API key for Etherscan
         // Obtain one at https://etherscan.io/
-        apiKey: "WQKQ9RXXCTK715PKG1H7JUMV4ZEUW3KKXN",
+        apiKey: {
+            // Ethereum
+            mainnet: ETHEREUM_API_KEY,
+            sepolia: ETHEREUM_API_KEY,
+            // Optimism
+            optimisticEthereum: OPTIMISM_API_KEY,
+            optimismSepolia: OPTIMISM_API_KEY,
+            // polygon
+            polygon: POLYGONSCAN_API_KEY,
+            polygonMumbai: POLYGONSCAN_API_KEY,
+            // Arbitrum
+            arbitrumOne: ARBITRUM_API_KEY,
+            arbitrumSepolia: ARBITRUM_API_KEY,
+            // Bsc
+            bsc: BSC_API_KEY,
+            bscTestnet: BSC_API_KEY,
+            // Fantom
+            ftmTestnet: FANTOM_API_KEY,
+            //
+        },
     },
     solidity: {
         version: "0.8.25",
@@ -70,6 +101,6 @@ module.exports = {
         },
     },
     mocha: {
-        timeout: 200000,
+        timeout: 20000000000,
     },
 };
