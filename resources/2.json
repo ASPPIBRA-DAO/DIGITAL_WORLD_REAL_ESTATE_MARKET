@@ -1,0 +1,22 @@
+{
+    "image": "https://ipfs.io/ipfs/QmeawJUyftSZrBWuaVGLN4SxsKPKvzSAPsYdhWBWqqVU5U?filename=news-2.jpg",
+    "description": "NFT-art-2",
+    "name": "effect-2",
+    "attributes": [
+        {
+            "key": "trait_type",
+            "value": "blur"
+        },
+        {
+            "key": "value",
+            "value": "0.4"
+        },
+        {
+            "key": "display_type",
+            "value": "number"
+        }
+    ],
+    "background_color": "white",
+    "animation_url": "",
+    "youtube_url": ""
+}

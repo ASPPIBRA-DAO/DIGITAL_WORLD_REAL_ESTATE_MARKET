@@ -90,28 +90,5 @@
         "background_color": "white",
         "animation_url": "",
         "youtube_url": ""
-    },
-    {
-        "image": "https://ipfs.io/ipfs/QmeawJUyftSZrBWuaVGLN4SxsKPKvzSAPsYdhWBWqqVU5U",
-        "external_url": "http://localhost:3001",
-        "description": "NFT-art-5",
-        "name": "effect-5",
-        "attributes": [
-            {
-                "key": "trait_type",
-                "value": "blur"
-            },
-            {
-                "key": "value",
-                "value": "0.4"
-            },
-            {
-                "key": "display_type",
-                "value": "number"
-            }
-        ],
-        "background_color": "white",
-        "animation_url": "",
-        "youtube_url": ""
     }
 ]

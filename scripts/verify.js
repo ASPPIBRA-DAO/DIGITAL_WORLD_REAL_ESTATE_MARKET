@@ -1,4 +1,3 @@
-const addresses = require("../build/addresses.json");
 const { getTargetAddress } = require("./helpers");
 
 async function main() {
