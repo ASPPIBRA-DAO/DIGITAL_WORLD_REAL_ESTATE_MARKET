@@ -12,20 +12,21 @@
 6. [**Contribuições**](#contribuições)
 7. [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md)
 
-## Introdução 🚀
+## Introduction 🚀
 
-O Mundo Digital Real Estate Marketplace tem como objetivo impulsionar a inclusão digital por meio da digitalização de registros imobiliários, permitindo transações internacionais no setor imobiliário. O processo de digitalização é semiautomatizado, possibilitando aos usuários do aplicativo Mundo Digital adquirir sua versão digital do registro imobiliário.
+The Mundo Digital Real Estate Marketplace aims to drive digital inclusion through the digitization of real estate records, enabling international transactions in the real estate sector. The digitization process is semi-automated, enabling users of the Mundo Digital application to acquire their digital version of the real estate record.
 
-## Requisitos 📋
+## Requirements 📋
 
-Para executar o contrato inteligente, é necessário ter o seguinte:
+To run the smart contract, you must have the following:
 
-- Uma carteira Web3 💼
-- Tokens de gás para pagar as taxas da rede ⛽
+- A Web3 wallet 💼
+- Gas tokens to pay network fees ⛽
 
-### Requisitos para digitalização de registros imobiliários 🏡
+### Requirements for scanning real estate records 🏡
 
-Além dos requisitos descritos na seção "Requisitos" deste README, o processo de digitalização de registros imobiliários também requer a coleta das seguintes informações e documentos:
+In addition to the requirements outlined in the "Requirements" section of this README, the real estate records digitization process also requires the collection of the following information and documents:
+
 
 | Categoria                       | Documento                                             | Descrição                                                                         |
 |---------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|
