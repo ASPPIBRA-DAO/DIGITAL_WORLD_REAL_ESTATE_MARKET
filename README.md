@@ -141,8 +141,7 @@ specified by [EIP-20](https://github.com/ethereum/ercs/blob/master/ERCS/erc-1155
 - `approve(address spender, uint256 value)`
 - `transferFrom(address from, address to, uint256 value)`
 
-And the usual events.
-
+#### And the usual events.
 - `event Transfer(address indexed from, address indexed to, uint256 value)`
 - `event Approval(address indexed owner, address indexed spender, uint256 value)`
 
