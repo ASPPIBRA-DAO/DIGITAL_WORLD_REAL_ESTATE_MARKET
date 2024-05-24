@@ -165,24 +165,6 @@ allowance change is subject to front-running, which is as simple as watching the
 mempool for certain transactions and then offering a higher gas price to get another 
 transaction mined onto the blockchain more quickly.
 
-### Controlling the NFT supply
-
-The total supply of NFT is backed by fiat held in reserve at ASPPIBRA-DAO.
-There is a single `supplyController` address that can mint and burn the token
-based on the actual movement of cash in and out of the reserve based on
-requests for the purchase and redemption of NFT.
-
-The supply control interface includes methods to get the current address
-of the supply controller, and events to monitor the change in supply of NFT.
-
-- `supplyController()`
-
-Supply Control Events
-
-- `SupplyIncreased(address indexed to, uint256 value)`
-- `SupplyDecreased(address indexed from, uint256 value)`
-- `SupplyControllerSet(address indexed oldSupplyController, address indexed newSupplyController)`
-
 # Explanation of User Roles
 
 ## Minting (Token Creation)
@@ -240,50 +222,69 @@ Supply Control Events
 ## Comments
 These functions enable a wide range of interactions with NFT tokens, from creation to transfer and participation in ecosystem governance. Make sure you understand the permissions and restrictions associated with each role before using them.
 
-### Pausing the contract
+# Contract Administrator Roles
 
-In the event of a critical security threat, ASPPIBRA-DAO has the ability to pause transfers
-and approvals of the NFT token. The ability to pause is controlled by a single `owner` role,
- following OpenZeppelin's
-[Ownable](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/5daaf60d11ee2075260d0f3adfb22b1c536db983/contracts/ownership/Ownable.sol). 
-The simple model for pausing transfers following OpenZeppelin's
-[Pausable](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/5daaf60d11ee2075260d0f3adfb22b1c536db983/contracts/lifecycle/Pausable.sol).
+## Controlling NFT Supply
 
-### Asset protection function
+For some specific cases, the total supply of NFTs is guaranteed by securities held in reserve at ASPPIBRA-DAO. A single address, called `supplyController`, has the authority to mint and burn tokens. This process is based on the real movement of money in and out of the reserve, according to requests for the purchase and redemption of NFTs.
 
-As required by our regulators, we have introduced an asset protection function to freeze or seize the assets of a criminal party when required by law, including by court order or other legal process.
+### Supply Control Interface
 
-The `assetProtectionRole` can freeze and unfreeze an NFT from any address on the chain.
-You can also clear the balance of an address after it has been frozen
-to allow the competent authorities to confiscate the collateral.
+#### Methods
 
-Freezing is something that ASPPIBRA-DAO will not do on its own,
-and as such, we expect it to happen extremely rarely. Frozen address list is available
-in `isFrozen (who address)`.
+- **`supplyController()`**: Returns the current address of the supply controller.
 
+#### Events
 
-### Upgradeability Proxy
+- **`SupplyIncreased(address indexed to, uint256 value)`**: Emits an event when the supply of NFTs is increased.
+- **`SupplyDecreased(address indexed from, uint256 value)`**: Emits an event when the supply of NFTs is reduced.
+- **`SupplyControllerSet(address indexed oldSupplyController, address indexed newSupplyController)`**: Emits an event when the supply controller is changed.
 
-To facilitate upgradeability on the immutable blockchain we follow a standard
-two-contract delegation pattern: a proxy contract represents the token,
-while all calls not involving upgrading the contract are delegated to an 
-implementation contract. 
+### Examples
 
-The delegation uses `delegatecall`, which runs the code of the implementation contract
-_in the context of the proxy storage_. This way the implementation pointer can
-be changed to a different implementation contract while still keeping the same
-data and DWorld contract address, which are really for the proxy contract.
+- *Supply Increase*: When new funds are added to the reserve, `supplyController` mints new NFTs, increasing the total in circulation.
+- *Supply Reduction*: When NFTs are redeemed for funds, `supplyController` burns these tokens, reducing the total supply.
 
-The proxy used here is AdminUpgradeabilityProxy from ZeppelinOS.
+## Pausing the Contract
 
-## Upgrade Process
+In the event of a critical security threat, ASPPIBRA-DAO has the ability to pause all NFT token transfers and approvals. This functionality is managed by an `owner` role, as implemented by the OpenZeppelin standards [Ownable](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/5daaf60d11ee2075260d0f3adfb22b1c536db983/contracts/ownership/Ownable.sol) and [Pausable ](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/5daaf60d11ee2075260d0f3adfb22b1c536db983/contracts/lifecycle/Pausable.sol).
 
-The implementation contract is only used for the logic of the non-admin methods.
-A new implementation contract can be set by calling `upgradeTo()` or `upgradeToAndCall()` on the proxy,
-where the latter is used for upgrades requiring a new initialization or data migration so that
-it can all be done in one transaction. You must first deploy a copy of the new implementation
-contract, which is automatically paused by its constructor to help avoid accidental calls directly
-to the proxy contract.
+### Examples
+
+- *Emergency Situation*: If a critical vulnerability is discovered, the pause function can be activated to prevent malicious movements until the situation is resolved.
+
+## Asset Protection Function
+
+To comply with regulatory requirements, we have introduced an asset protection function that allows you to freeze or seize the assets of a criminal party when required by law, such as by court order or other legal process.
+
+### Asset Protection Role
+
+- **`assetProtectionRole`**: This role can freeze and unfreeze NFTs from any address on the blockchain and clear the balance of a frozen address, allowing authorities to confiscate the assets.
+- **`isFrozen(address who)`**: Checks if an address is frozen.
+
+### Examples
+
+- *Asset Freezing*: If an address is identified as belonging to a criminal entity, `assetProtectionRole` can freeze NFTs from that address, preventing any transfer.
+
+## Upgradability Proxy
+
+To facilitate contract updating on the immutable blockchain, we follow a delegation pattern with two contracts: a proxy contract that represents the token and an implementation contract that contains the token logic. 
+
+### Delegation with Delegatecall
+
+Delegation uses `delegatecall`, executing the implementation contract code in the context of the proxy store. This allows you to change the implementation contract without changing the proxy contract data or address.
+
+- **Proxy Used**: AdminUpgradeabilityProxy from ZeppelinOS.
+
+## Update Process
+
+The implementation contract only handles the logic of the non-administrative methods. To update the implementation contract, we call `upgradeTo()` or `upgradeToAndCall()` on the proxy. The second method is used for updates that require new initialization or data migration, all in a single transaction.
+
+### Examples
+
+- *Implementation Update*: To add new features or fix bugs, we deploy a new implementation contract and use `upgradeToAndCall()` to migrate the necessary data.
+
+By following these practices, we ensure that the contract remains secure, updatable, and compliant with legal regulations.
 
 ## Bytecode verification
 
