@@ -47,20 +47,20 @@ In addition to the requirements outlined in the "Requirements" section of this R
 | **Escritura:**                  | Escritura                                             | Documento público que registra a transferência de propriedade de um imóvel        |
 | **Fotos do imóvel:**            | Fotos do imóvel                                       | Fotos do imóvel para ilustrar e facilitar a identificação do imóvel                |
 
-## Recursos Principais
+## Key Features
 
-O projeto apresenta um contrato Solidity que serve como um Marketplace descentralizado para tokens não fungíveis (NFTs), oferecendo uma série de recursos robustos:
+The project features a Solidity contract that serves as a decentralized marketplace for non-fungible tokens (NFTs), offering a number of robust features:
 
-1. **Criação Descentralizada de NFTs:**
-   - Os usuários podem criar facilmente seus próprios NFTs de forma descentralizada, proporcionando autonomia na geração de conteúdo exclusivo.
+1. **Decentralized Creation of NFTs:**
+    - Users can easily create their own NFTs in a decentralized way, providing autonomy in generating exclusive content.
 
-2. **Negociação compra e venda de NFTs:**
-   - Facilita a negociação peer-to-peer de NFTs, permitindo que os usuários troquem ativos digitais de maneira segura e transparente.
+2. **Buying and selling NFTs:**
+    - Facilitates peer-to-peer trading of NFTs, allowing users to exchange digital assets in a secure and transparent manner.
 
-3. **Leilões Descentralizados:**
-   - Oferece a funcionalidade de criar leilões para NFTs, possibilitando aos usuários aceitar lances em um ambiente descentralizado e transparente.
+3. **Decentralized Auctions:**
+    - Offers the functionality to create auctions for NFTs, enabling users to accept bids in a decentralized and transparent environment.
 
-## Uso 🛠️
+## Usage 🛠️
 
 ### Screenshots
 
@@ -267,35 +267,32 @@ Then in the original terminal where setup was executed, run
 
 You can also run `make test-contracts-coverage` to see a coverage report.
 
+## Contributions 🤝
 
+### Reporting Problems 🐛
 
-## Contribuições 🤝
+If you encounter any problems or bugs, feel free to open an issue in our repository. Be sure to provide details about the issue you encountered, including steps to reproduce, error messages, and relevant information to facilitate the fix.
 
-### Relatando Problemas 🐛
+### Proposing Improvements 🚀
 
-Se encontrar algum problema ou bug, sinta-se à vontade para abrir uma issue em nosso repositório. Certifique-se de fornecer detalhes sobre o problema encontrado, incluindo passos para reprodução, mensagens de erro e informações relevantes para facilitar a correção.
+Do you have ideas to improve the smart contract or user experience on Mundo Digital Marketplace? Open an issue to discuss your proposals. We're open to suggestions for new features, performance improvements, and general optimizations.
 
-### Propondo Melhorias 🚀
+### Contributing Code 💻
 
-Você tem ideias para melhorar o contrato inteligente ou a experiência do usuário no Mundo Digital Marketplace? Abra uma issue para discutir suas propostas. Estamos abertos a sugestões para novos recursos, aprimoramentos de desempenho e otimizações gerais.
+If you want to directly contribute code, follow these steps:
 
-### Contribuindo com Código 💻
+1. **Fork the Repository:** Fork our repository to your own account.
+2. **Branch Creation:** Create a branch to work on your contribution.
+3. **Development:** Implement your improvements or corrections.
+4. **Testing:** Be sure to test your changes.
+5. **Pull Request (PR):** Open a PR describing your changes and explaining the benefits.
+6. **Review:** Wait for our maintainers to review your PR.
 
-Se deseja contribuir diretamente com código, siga estas etapas:
+### Documentation 📚
 
-1. **Fork do Repositório:** Faça um fork do nosso repositório para sua própria conta.
-2. **Criação de Branch:** Crie um branch para trabalhar na sua contribuição.
-3. **Desenvolvimento:** Implemente suas melhorias ou correções.
-4. **Testes:** Certifique-se de testar suas alterações.
-5. **Solicitação de Pull (PR):** Abra uma PR descrevendo suas alterações e explicando os benefícios.
-6. **Revisão:** Aguarde a revisão da sua PR por nossos mantenedores.
+Contributions to documentation are also valued. If you identify areas that need more clarity or want to add useful information, please feel free to submit proposed changes to the documentation.
 
-### Documentação 📚
+Thanks in advance for your support and contributions to making the Digital World smart contract even better. Together, we can create a more robust and efficient platform.
 
-Contribuições para a documentação também são valorizadas. Se você identificar áreas que precisam de mais clareza ou quiser adicionar informações úteis, sinta-se à vontade para enviar propostas de alteração na documentação.
-
-Agradecemos antecipadamente por seu suporte e contribuições para tornar o contrato inteligente do Mundo Digital ainda melhor. Juntos, podemos criar uma plataforma mais robusta e eficiente.
-
-## Licença 📄
-
-Este projeto é protegido pelos termos do modelo de licença de Software Proprietário. Consulte o arquivo [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md) para obter detalhes.
+## License 📄
+This project is protected by the terms of the Proprietary Software license model. See the file [**Licença**](https://github.com/ASPPIBRA-DAO/DIGITAL_WORLD_REAL_ESTATE_MARKET/blob/a145c7c2e2a1fa311bb814ed8ed9b1819a20631d/LICENSE.md) for details.
