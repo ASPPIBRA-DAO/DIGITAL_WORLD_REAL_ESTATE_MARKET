@@ -128,14 +128,17 @@ representing the trusted party backing the token in US dollars.
 DWorld's public interface is ERC721 and ERC1155 interface
 specified by [EIP-20](https://github.com/ethereum/ercs/blob/master/ERCS/erc-1155.md).
 
+#### Read Contract
 - `name()`
 - `symbol()`
 - `decimals()`
 - `totalSupply()`
 - `balanceOf(address who)`
+- `allowance(address owner, address spender)`
+  
+#### Write Contract
 - `transfer(address to, uint256 value)`
 - `approve(address spender, uint256 value)`
-- `allowance(address owner, address spender)`
 - `transferFrom(address from, address to, uint256 value)`
 
 And the usual events.
