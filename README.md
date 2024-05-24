@@ -183,6 +183,63 @@ Supply Control Events
 - `SupplyDecreased(address indexed from, uint256 value)`
 - `SupplyControllerSet(address indexed oldSupplyController, address indexed newSupplyController)`
 
+# Explanation of User Roles
+
+## Minting (Token Creation)
+- **Description**: Any user can create a new token.
+- **How to Use**: Call the `mint` function by providing a metadata URI and paying a fee if necessary.
+- **Function**: `mint(string memory uri) public payable`
+
+## Owner Token Query
+- **Description**: Allows users to see all token IDs that a given address has.
+- **How to Use**: Use the `tokenIdsOfOwner` function passing the owner's address.
+- **Function**: `tokenIdsOfOwner(address _owner) public view returns (uint256[] memory)`
+
+## Metadata URI Query
+- **Description**: Allows you to obtain the URI of the metadata of a specific token.
+- **How to Use**: Call the `tokenURI` function with the ID of the desired token.
+- **Function**: `tokenURI(uint256 tokenId) public view returns (string memory)`
+
+## Token Creator Query
+- **Description**: Allows you to check who created a specific token.
+- **How to Use**: Use the `creatorOf` function passing the token ID.
+- **Function**: `creatorOf(uint tokenId) public view returns (address)`
+
+## Token Transfer
+- **Description**: Users can transfer tokens between addresses.
+- **How to Use**: Use the `transferFrom` or `safeTransferFrom` functions (with or without additional data).
+- **Functions**:
+   - `transferFrom(address from, address to, uint256 tokenId) public`
+   - `safeTransferFrom(address from, address to, uint256 tokenId) public`
+   - `safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public`
+
+## Approve Transfers
+- **Description**: Users can authorize other addresses to transfer their specific tokens or all of their tokens.
+- **How to Use**: Call the `approve` or `setApprovalForAll` functions.
+- **Functions**:
+   - `approve(address to, uint256 tokenId) public`
+   - `setApprovalForAll(address operator, bool approved) public`
+
+## Approval Consultation
+- **Description**: Allows you to check who is approved to transfer a specific token or all tokens from an owner.
+- **How to Use**: Use the `getApproved` or `isApprovedForAll` functions.
+- **Functions**:
+   - `getApproved(uint256 tokenId) public view returns (address)`
+   - `isApprovedForAll(address owner, address operator) public view returns (bool)`
+
+## Update Metadata
+- **Description**: The token owner can update the token metadata.
+- **How to Use**: Call the `setTokenURI` function providing the token ID and the new URI.
+- **Function**: `setTokenURI(uint256 tokenId, string memory uri) public`
+
+## Voting
+- **Description**: Used to interact with ecosystem governance or proposals.
+- **How to Use**: Depends on the specific implementation of governance in the contract, usually involving voting functions.
+- **Function**: Dependent on the specific governance contract, which is not detailed here.
+
+## Comments
+These functions enable a wide range of interactions with NFT tokens, from creation to transfer and participation in ecosystem governance. Make sure you understand the permissions and restrictions associated with each role before using them.
+
 ### Pausing the contract
 
 In the event of a critical security threat, ASPPIBRA-DAO has the ability to pause transfers
