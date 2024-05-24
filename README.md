@@ -232,18 +232,6 @@ to the proxy contract.
 
 The proxy contract and implementation contracts are verified on etherscan at the following links:
 
-https://testnet.bscscan.com/token/0xb1d4a44ce8aa5e2eb2e23d7002693918f4f36c72
-https://testnet.bscscan.com/address/0x4d92829620a7dEf47Ba60f9E68eAC1e1683A87fF
-https://testnet.bscscan.com/address/0x2cfF281E01d58143089997AC5A495D85d89D1bB2
-https://testnet.bscscan.com/address/0x3fda2E660DC06D3eCc2cC5a797af7eD8De89f2f4
-
-https://testnet.bscscan.com/address/0x86a98eb31721f997Fed65f2aEa535DD428dCe193#code
-https://testnet.bscscan.com/address/0x4d92829620a7dEf47Ba60f9E68eAC1e1683A87fF#code
-https://testnet.bscscan.com/address/0x2cfF281E01d58143089997AC5A495D85d89D1bB2#code
-https://testnet.bscscan.com/address/0x3fda2E660DC06D3eCc2cC5a797af7eD8De89f2f4#code
-https://testnet.bscscan.com/address/0x7FF0884888EA59c6a02C2D8a6844A27235BA78F5#code
-
-
 Because the implementation address in the proxy is a private variable, 
 verifying that this is the proxy being used requires reading contract
 storage directly. This can be done using a mainnet node, such as infura,
@@ -252,6 +240,18 @@ by pasting the network address in `truffle-config.js` and running
 `truffle exec ./getImplementationAddress.js --network mainnet`
 
 ## Contract Tests
+
+https://testnet.bscscan.com/token/0xb1d4a44ce8aa5e2eb2e23d7002693918f4f36c72
+
+https://testnet.bscscan.com/address/0x86a98eb31721f997Fed65f2aEa535DD428dCe193#code
+
+#### NFT
+https://testnet.bscscan.com/address/0x4d92829620a7dEf47Ba60f9E68eAC1e1683A87fF#code
+https://testnet.bscscan.com/address/0x2cfF281E01d58143089997AC5A495D85d89D1bB2#code
+
+#### Contract
+https://testnet.bscscan.com/address/0x3fda2E660DC06D3eCc2cC5a797af7eD8De89f2f4#code
+https://testnet.bscscan.com/address/0x7FF0884888EA59c6a02C2D8a6844A27235BA78F5#code
 
 As a first step run the initial setup
 
